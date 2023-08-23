@@ -5,7 +5,31 @@ function App() {
 
   return (
     <>
-      <main></main>
+      <main>
+        <div className="card profile-card">
+          <div className="profile card">
+            <img src="/image-jeremy.png" alt="Headshot of Jeremey smiling" />
+            <p>Report for</p>
+            <h1>Jeremy Robson</h1>
+          </div>
+          <div className="flex-wrapper frequency-text">
+            <p>Daily</p>
+            <p className="active">Weekly</p>
+            <p>Monthly</p>
+          </div>
+        </div>
+        <div className="report-card card work">
+          <div className="report-info card">
+            <h2>Work</h2>
+            <div className="flex-wrapper hours-text">
+              <span className="total-hours">32hrs</span>
+              <p>
+                Last Week - <span className="previous">36hrs</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
       <footer>
         <p className="attribution">
           Challenge by{" "}

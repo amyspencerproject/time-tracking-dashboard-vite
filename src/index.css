@@ -78,14 +78,127 @@ select {
 
 /* ========== CSS Variables ========== */
 
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(15, 100%, 70%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --vry-drk-blue: hsl(226, 43%, 10%);
+  --drk-blue: hsl(235, 46%, 20%);
+  --desat-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --white: hsl(0, 0%, 100%);
+}
+
 /* ========== Base Styles ========== */
 body {
   font-family: "Rubik", sans-serif;
+  font-size: 1.125rem;
+  color: var(--pale-blue);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--vry-drk-blue);
+}
+
+.card {
+  border-radius: 15px;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+/* ======== Profile Card ======== */
+
+.profile-card {
+  background-color: var(--drk-blue);
+  margin: 1rem;
+}
+.profile {
+  background-color: var(--blue);
+  margin: 1rem;
+}
+
+.profile h1 {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.frequency-text {
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem;
+}
+
+.active {
+  color: var(--white);
+}
+
+/* ======== Report Cards ======== */
+
+.report-card h2 {
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+.report-info {
+  display: flex;
+  flex-flow: column wrap;
+  background-color: var(--drk-blue);
+  /* justify-content: start; */
+  margin-top: 3rem;
+}
+
+.hours-text {
+  align-items: center;
+  font-size: 0.9375rem;
+  gap: 1rem;
+}
+
+.total-hours {
+  color: var(--white);
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* == Report Card Bacgrounds == */
+
+.work {
+  background-color: var(--light-red-work);
+}
+
+.play {
+  background-color: var(--soft-blue-play);
+}
+.study {
+  background-color: var(--light-red-study);
+}
+
+.exercise {
+  background-color: var(--lime-green-exercise);
+}
+
+.social {
+  background-color: var(--violet-social);
+}
+
+.self-care {
+  background-color: var(--soft-orange-self-care);
 }
 
 /* ========== Footer ========== */
 
 footer {
+  background-color: var(--vry-drk-blue);
   display: flex;
   flex-flow: column wrap;
   justify-content: end;
@@ -94,13 +207,13 @@ footer {
 }
 
 footer p {
-  color: var(--light-lavender);
+  color: var(--white);
   font-size: 0.825rem;
 }
 
 footer a {
   text-decoration: none;
-  color: var(--gradient-circle-1);
+  color: var(--pale-blue);
 }
 
 /* ========== Media Queries ========== */
@@ -111,4 +224,7 @@ footer a {
 
 /* desktop change at 960px */
 @media screen and (min-width: 60rem) {
+  .total-hours {
+    font-size: 3.5rem;
+  }
 }
