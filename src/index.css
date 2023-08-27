@@ -82,13 +82,14 @@ select {
   --blue: hsl(246, 80%, 60%);
   --light-red-work: hsl(15, 100%, 70%);
   --soft-blue-play: hsl(195, 74%, 62%);
-  --light-red-study: hsl(15, 100%, 70%);
+  --light-red-study: hsl(348, 100%, 68%);
   --lime-green-exercise: hsl(145, 58%, 55%);
   --violet-social: hsl(264, 64%, 52%);
   --soft-orange-self-care: hsl(43, 84%, 65%);
   --vry-drk-blue: hsl(226, 43%, 10%);
   --drk-blue: hsl(235, 46%, 20%);
   --desat-blue: hsl(235, 45%, 61%);
+  --blue-reportcard-hover: hsl(235, 41%, 34%);
   --pale-blue: hsl(236, 100%, 87%);
   --white: hsl(0, 0%, 100%);
 }
@@ -159,18 +160,17 @@ main {
   margin: 1.5rem;
 }
 
-.active {
+.active:hover {
   color: var(--white);
 }
 
 /* ======== Report Cards ======== */
 .report-card {
-  position: relative;
-  z-index: 1;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .report-icon {
-  position: absolute;
   z-index: 2;
   top: 10%;
   right: 20%;
@@ -189,11 +189,19 @@ main {
   justify-content: end;
 }
 
+.svg-ellipsis {
+  fill: var(--pale-blue);
+}
+
+.svg-ellipsis:hover {
+  fill: var(--white);
+}
+
 .report-header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  margin-inline: 1rem;
+  /* margin-inline: 1rem; */
   margin-top: 2rem;
 }
 
@@ -202,14 +210,19 @@ main {
   flex-flow: column wrap;
   background-color: var(--drk-blue);
   margin-top: 3rem;
+  padding-inline: 1rem;
+}
+
+.report-info:hover {
+  background-color: var(--blue-reportcard-hover);
 }
 
 .hours-text {
   align-items: center;
   font-size: 0.9375rem;
   gap: 3rem;
-  margin-inline: 1rem;
-  margin-bottom: 3rem;
+  /* margin-inline: 3rem; */
+  margin-bottom: 1rem;
 }
 
 .total-hours {
@@ -224,26 +237,41 @@ main {
   background-color: var(--light-red-work);
   background-image: url(/public/icon-work.svg);
   background-repeat: no-repeat;
-  background-position: right 5% top -15%;
+  background-position: right 8% top -6%;
 }
 
 .play {
   background-color: var(--soft-blue-play);
+  background-image: url(/public/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: right 8% top -6%;
 }
 .study {
   background-color: var(--light-red-study);
+  background-image: url(/public/icon-study.svg);
+  background-repeat: no-repeat;
+  background-position: right 8% top -6%;
 }
 
 .exercise {
   background-color: var(--lime-green-exercise);
+  background-image: url(/public/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-position: right 8% top 1%;
 }
 
 .social {
   background-color: var(--violet-social);
+  background-image: url(/public/icon-social.svg);
+  background-repeat: no-repeat;
+  background-position: right 8% top -6%;
 }
 
 .self-care {
   background-color: var(--soft-orange-self-care);
+  background-image: url(/public/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-position: right 8% top -6%;
 }
 
 /* ========== Footer ========== */
