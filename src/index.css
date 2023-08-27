@@ -102,12 +102,13 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr;
+  place-content: center;
   background-color: var(--vry-drk-blue);
 }
 
 .card {
   border-radius: 15px;
+  max-width: 20.4375rem;
 }
 
 .flex-wrapper {
@@ -119,23 +120,43 @@ main {
 
 .profile-card {
   background-color: var(--drk-blue);
-  margin: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  max-width: 20.4375rem;
 }
+
 .profile {
   background-color: var(--blue);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.profile img {
+  border: var(--white) solid 3px;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
   margin: 1rem;
+}
+
+.profile-text {
+  display: flex;
+  flex-flow: column wrap;
+  padding-right: 1rem;
 }
 
 .profile h1 {
   color: var(--white);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 
 .frequency-text {
   justify-content: space-between;
   gap: 1rem;
-  margin: 2rem;
+  margin: 1.5rem;
 }
 
 .active {
@@ -143,25 +164,52 @@ main {
 }
 
 /* ======== Report Cards ======== */
+.report-card {
+  position: relative;
+  z-index: 1;
+}
+
+.report-icon {
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  right: 20%;
+}
 
 .report-card h2 {
   color: var(--white);
   font-weight: 400;
   font-size: 1.125rem;
 }
+.svg-wrapper {
+  width: 5rem;
+  height: 2rem;
+  display: grid;
+  align-content: center;
+  justify-content: end;
+}
+
+.report-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin-inline: 1rem;
+  margin-top: 2rem;
+}
 
 .report-info {
   display: flex;
   flex-flow: column wrap;
   background-color: var(--drk-blue);
-  /* justify-content: start; */
   margin-top: 3rem;
 }
 
 .hours-text {
   align-items: center;
   font-size: 0.9375rem;
-  gap: 1rem;
+  gap: 3rem;
+  margin-inline: 1rem;
+  margin-bottom: 3rem;
 }
 
 .total-hours {
@@ -174,6 +222,9 @@ main {
 
 .work {
   background-color: var(--light-red-work);
+  background-image: url(/public/icon-work.svg);
+  background-repeat: no-repeat;
+  background-position: right 5% top -15%;
 }
 
 .play {
@@ -226,5 +277,14 @@ footer a {
 @media screen and (min-width: 60rem) {
   .total-hours {
     font-size: 3.5rem;
+  }
+
+  .profile img {
+    width: 4.875rem;
+    height: 4.875rem;
+  }
+
+  .profile h1 {
+    font-size: 2.5rem;
   }
 }

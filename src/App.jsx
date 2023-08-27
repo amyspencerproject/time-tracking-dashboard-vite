@@ -9,8 +9,10 @@ function App() {
         <div className="card profile-card">
           <div className="profile card">
             <img src="/image-jeremy.png" alt="Headshot of Jeremey smiling" />
-            <p>Report for</p>
-            <h1>Jeremy Robson</h1>
+            <div className="profile-text">
+              <p>Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
           </div>
           <div className="flex-wrapper frequency-text">
             <p>Daily</p>
@@ -19,8 +21,14 @@ function App() {
           </div>
         </div>
         <div className="report-card card work">
+          {/* <img className="report-icon" src="/icon-work.svg" alt="" /> */}
           <div className="report-info card">
-            <h2>Work</h2>
+            <div className="report-header">
+              <h2>Work</h2>
+              <div className="svg-wrapper">
+                <img src="/icon-ellipsis.svg" alt="" />
+              </div>
+            </div>
             <div className="flex-wrapper hours-text">
               <span className="total-hours">32hrs</span>
               <p>
