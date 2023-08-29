@@ -303,6 +303,24 @@ footer a {
 
 /* desktop change at 960px */
 @media screen and (min-width: 60rem) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  .profile-card {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .profile {
+    flex-direction: column;
+    /* padding-bottom: 10rem; */
+    align-items: start;
+    padding: 1.5rem 1.5rem 8rem 1.5rem;
+  }
+
   .total-hours {
     font-size: 3.5rem;
   }
@@ -310,9 +328,25 @@ footer a {
   .profile img {
     width: 4.875rem;
     height: 4.875rem;
+    margin: 1rem 0;
   }
 
   .profile h1 {
     font-size: 2.5rem;
+  }
+
+  .profile-text {
+    margin-top: 2rem;
+  }
+
+  .report-card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: end;
+  }
+
+  .flex-wrapper {
+    flex-direction: column;
+    align-items: start;
   }
 }
