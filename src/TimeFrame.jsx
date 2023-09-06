@@ -1,50 +1,69 @@
+import data from "./data.json";
+
 const TimeFrame = ({ timeFrame }) => {
-  // set State for time frame user wants to see
-  const onTimeFrameChange = () => {
-    if (timeFrame === "weekly") {
-      return (
-        <>
-          <span className="total-hours">
-            {work.timeframes.weekly.current}hrs
+  if (timeFrame === "weekly") {
+    const weeklyTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframe: data.timeframes.weekly,
+      };
+    });
+    console.log(weeklyTimeFrame);
+    return (
+      <>
+        <span className="total-hours">
+          {weeklyTimeFrame.timeframe.current}hrs
+        </span>
+        <p>
+          Last Week -{" "}
+          <span className="previous">
+            {weeklyTimeFrame.timeframe.previous}hrs
           </span>
-          <p>
-            Last Week -{" "}
-            <span className="previous">
-              {work.timeframes.weekly.previous}hrs
-            </span>
-          </p>
-        </>
-      );
-    } else if (timeFrame === "daily") {
-      return (
-        <>
-          <span className="total-hours">
-            {work.timeframes.daily.current}hrs
+        </p>
+      </>
+    );
+  } else if (timeFrame === "daily") {
+    const dailyTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframe: data.timeframes.daily,
+      };
+    });
+    return (
+      <>
+        <span className="total-hours">
+          {dailyTimeFrame.timeframe.current}hrs
+        </span>
+        <p>
+          Yesterday -{" "}
+          <span className="previous">
+            {dailyTimeFrame.timeframe.previous}hrs
           </span>
-          <p>
-            Yesterday -{" "}
-            <span className="previous">
-              {work.timeframes.daily.previous}hrs
-            </span>
-          </p>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <span className="total-hours">
-            {work.timeframes.monthly.current}hrs
+        </p>
+      </>
+    );
+  } else {
+    const monthlyTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframe: data.timeframes.monthly,
+      };
+    });
+
+    return (
+      <>
+        <span className="total-hours">
+          {monthlyTimeFrame.timeframe.current}hrs
+        </span>
+        <p>
+          Last month -{" "}
+          <span className="previous">
+            {monthlyTimeFrame.timeframe.previous}hrs
           </span>
-          <p>
-            Last month -{" "}
-            <span className="previous">
-              {work.timeframes.monthly.previous}hrs
-            </span>
-          </p>
-        </>
-      );
-    }
-  };
+        </p>
+      </>
+    );
+  }
 };
 
 export default TimeFrame;

@@ -54,13 +54,23 @@ Your users should be able to:
 
 - When you import a `.json` file into React it will automatically be parsed 🥳
 
-- Not sure what type of element to make the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. Right now I have `<p>` elements.
+- Used a button elements for the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard.
+- Since I used buttons I could not keep the time frame switching in the same event handler
+  `// This wont work with each time frame being a button`
+
+  ```
+  const handleTimeFrameChange = (e) => {
+  setTimeFrame(e.target.value);
+  console.log(timeFrame);
+  };
+  ```
 
 - Have not been able to get `filter()` to work `data`. This is an array of objects with nested objects. I can get pull out specific information by saving each object in data as a variable.
 
-  `const work = data[0];`
-
-  `<h2>{work.title}</h2>`
+  ```
+  const work = data[0];
+  <h2>{work.title}</h2>
+  ```
 
 - Not sure the best approach for handling the larger data set that is `data`. Would it be alright to pull each object out into a variable named for it's category and then just handle data separatly? Or should you always keep the data source as the primary place to get data from?
 
@@ -75,3 +85,7 @@ Your users should be able to:
 - Website - [Amy Spencer](https://spencerproject.com/)
 - Frontend Mentor - [@amyspencerproject](https://www.frontendmentor.io/profile/amyspencerproject)
 - Linkedin - [amyspencercodes](https://www.linkedin.com/in/amyspencercodes/)
+
+```
+
+```

@@ -107,6 +107,13 @@ main {
   background-color: var(--vry-drk-blue);
 }
 
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: var(--pale-blue);
+}
+
 .all-cards-container {
   display: grid;
   place-content: center;
@@ -166,7 +173,7 @@ main {
   margin: 1.5rem;
 }
 
-.active:hover {
+.hover:hover {
   color: var(--white);
 }
 

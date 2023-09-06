@@ -6,9 +6,23 @@ import Footer from "./Footer";
 
 function App() {
   const [timeFrame, setTimeFrame] = useState("weekly");
+  console.log(timeFrame);
 
-  const handleTimeFrameChange = (e) => {
-    setTimeFrame(e.target.value);
+  // daily
+  const handleDailyBtn = () => {
+    setTimeFrame("daily");
+    console.log(timeFrame);
+  };
+
+  // weekly
+  const handleWeeklyBtn = () => {
+    setTimeFrame("weekly");
+    console.log(timeFrame);
+  };
+
+  // monthly
+  const handleMonthlyBtn = () => {
+    setTimeFrame("monthly");
     console.log(timeFrame);
   };
 
@@ -16,7 +30,11 @@ function App() {
     <>
       <main>
         <div className="all-cards-container">
-          <ProfileCard handleTimeFrameChange={handleTimeFrameChange} />
+          <ProfileCard
+            handleDailyBtn={handleDailyBtn}
+            handleWeeklyBtn={handleWeeklyBtn}
+            handleMonthlyBtn={handleMonthlyBtn}
+          />
           <ReportCard timeFrame={timeFrame} />
         </div>
         <Footer />

@@ -1,4 +1,4 @@
-const ProfileCard = ({ handleTimeFrameChange }) => {
+const ProfileCard = ({ handleDailyBtn, handleWeeklyBtn, handleMonthlyBtn }) => {
   return (
     <div className="card profile-card">
       <div className="profile card">
@@ -9,16 +9,15 @@ const ProfileCard = ({ handleTimeFrameChange }) => {
         </div>
       </div>
       <div className="flex-wrapper frequency-text">
-        {/* these options should not be <p> but not sure what element to use?? */}
-        <p onChange={handleTimeFrameChange} value="daily" className="active">
+        <button onClick={handleDailyBtn} value="daily" className="hover">
           Daily
-        </p>
-        <p onChange={handleTimeFrameChange} value="weekly" className="active">
+        </button>
+        <button onClick={handleWeeklyBtn} value="weekly" className="hover">
           Weekly
-        </p>
-        <p onChange={handleTimeFrameChange} value="monthly" className="active">
+        </button>
+        <button onClick={handleMonthlyBtn} value="monthly" className="hover">
           Monthly
-        </p>
+        </button>
       </div>
     </div>
   );
