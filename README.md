@@ -1,4 +1,4 @@
-# Time tracking dashboard solution
+# Time Tracking Dashboard Solution
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -38,21 +38,31 @@ Your users should be able to:
 
 ### Links
 
-- Github Repo URL: [QR Code Repo](https://github.com/amyspencerproject/qr-code)
-- Live Site URL: [QR Code Page](https://amyspencerproject.github.io/qr-code/)
+- Github Repo URL: [Time Tracking Dashboard Repo](https://github.com/amyspencerproject/time-tracking-dashboard-vite)
+- Live Site URL: [ X Page]()
 
 ## My process
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS Variables
-- CSS Grid
 - Mobile-first workflow
+- CSS
+- Vite
+- React JS
 
 ### What I learned
 
--
+- When you import a `.json` file into React it will automatically be parsed 🥳
+
+- Not sure what type of element to make the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. Right now I have `<p>` elements.
+
+- Have not been able to get `filter()` to work `data`. This is an array of objects with nested objects. I can get pull out specific information by saving each object in data as a variable.
+
+  `const work = data[0];`
+
+  `<h2>{work.title}</h2>`
+
+- Not sure the best approach for handling the larger data set that is `data`. Would it be alright to pull each object out into a variable named for it's category and then just handle data separatly? Or should you always keep the data source as the primary place to get data from?
 
 ### Continued development
 

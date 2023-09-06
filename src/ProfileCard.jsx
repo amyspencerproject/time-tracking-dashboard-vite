@@ -1,4 +1,4 @@
-export const ProfileCard = () => {
+const ProfileCard = ({ handleTimeFrameChange }) => {
   return (
     <div className="card profile-card">
       <div className="profile card">
@@ -9,10 +9,19 @@ export const ProfileCard = () => {
         </div>
       </div>
       <div className="flex-wrapper frequency-text">
-        <p className="active">Daily</p>
-        <p className="active">Weekly</p>
-        <p className="active">Monthly</p>
+        {/* these options should not be <p> but not sure what element to use?? */}
+        <p onChange={handleTimeFrameChange} value="daily" className="active">
+          Daily
+        </p>
+        <p onChange={handleTimeFrameChange} value="weekly" className="active">
+          Weekly
+        </p>
+        <p onChange={handleTimeFrameChange} value="monthly" className="active">
+          Monthly
+        </p>
       </div>
     </div>
   );
 };
+
+export default ProfileCard;
