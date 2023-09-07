@@ -1,17 +1,43 @@
 import { useState } from "react";
+import data from "./data.json";
 
 import ProfileCard from "./ProfileCard";
 import ReportCard from "./ReportCard";
 import Footer from "./Footer";
 
 function App() {
-  const [timeFrame, setTimeFrame] = useState("weekly");
-  console.log(timeFrame);
+  const [timeFrame, setTimeFrame] = useState("daily");
 
+  let selectedTimeFrame;
+  if (timeFrame === "daily") {
+    selectedTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframes: data.timeframes.daily,
+      };
+    });
+  }
+
+  if (timeFrame === "weekly") {
+    selectedTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframes: data.timeframes.weekly,
+      };
+    });
+  }
+
+  if (timeFrame === "monthly") {
+    selectedTimeFrame = data.map((data) => {
+      return {
+        title: data.title,
+        timeframes: data.timeframes.monthly,
+      };
+    });
+  }
   // daily
   const handleDailyTab = () => {
     setTimeFrame("daily");
-    console.log(timeFrame);
     // add aria-selected="true"
     // have text turn white when selected
   };
@@ -19,13 +45,11 @@ function App() {
   // weekly
   const handleWeeklyTab = () => {
     setTimeFrame("weekly");
-    console.log(timeFrame);
   };
 
   // monthly
   const handleMonthlyTab = () => {
     setTimeFrame("monthly");
-    console.log(timeFrame);
   };
 
   return (
@@ -37,7 +61,7 @@ function App() {
             handleWeeklyTab={handleWeeklyTab}
             handleMonthlyTab={handleMonthlyTab}
           />
-          <ReportCard timeFrame={timeFrame} />
+          <ReportCard selectedTimeFrame={selectedTimeFrame} />
         </div>
         <Footer />
       </main>
