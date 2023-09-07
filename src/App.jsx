@@ -9,19 +9,21 @@ function App() {
   console.log(timeFrame);
 
   // daily
-  const handleDailyBtn = () => {
+  const handleDailyTab = () => {
     setTimeFrame("daily");
     console.log(timeFrame);
+    // add aria-selected="true"
+    // have text turn white when selected
   };
 
   // weekly
-  const handleWeeklyBtn = () => {
+  const handleWeeklyTab = () => {
     setTimeFrame("weekly");
     console.log(timeFrame);
   };
 
   // monthly
-  const handleMonthlyBtn = () => {
+  const handleMonthlyTab = () => {
     setTimeFrame("monthly");
     console.log(timeFrame);
   };
@@ -31,9 +33,9 @@ function App() {
       <main>
         <div className="all-cards-container">
           <ProfileCard
-            handleDailyBtn={handleDailyBtn}
-            handleWeeklyBtn={handleWeeklyBtn}
-            handleMonthlyBtn={handleMonthlyBtn}
+            handleDailyTab={handleDailyTab}
+            handleWeeklyTab={handleWeeklyTab}
+            handleMonthlyTab={handleMonthlyTab}
           />
           <ReportCard timeFrame={timeFrame} />
         </div>

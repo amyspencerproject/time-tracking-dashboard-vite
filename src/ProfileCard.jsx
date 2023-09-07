@@ -1,4 +1,4 @@
-const ProfileCard = ({ handleDailyBtn, handleWeeklyBtn, handleMonthlyBtn }) => {
+const ProfileCard = ({ handleDailyTab, handleWeeklyTab, handleMonthlyTab }) => {
   return (
     <div className="card profile-card">
       <div className="profile card">
@@ -8,17 +8,35 @@ const ProfileCard = ({ handleDailyBtn, handleWeeklyBtn, handleMonthlyBtn }) => {
           <h1>Jeremy Robson</h1>
         </div>
       </div>
-      <div className="flex-wrapper frequency-text">
-        <button onClick={handleDailyBtn} value="daily" className="hover">
+      <ul role="tablist" className="flex-wrapper frequency-text">
+        <li
+          role="tab"
+          aria-label="daily"
+          onClick={handleDailyTab}
+          value="daily"
+          className="time-frame-element"
+        >
           Daily
-        </button>
-        <button onClick={handleWeeklyBtn} value="weekly" className="hover">
+        </li>
+        <li
+          role="tab"
+          aria-label="weekly"
+          onClick={handleWeeklyTab}
+          value="weekly"
+          className="time-frame-element"
+        >
           Weekly
-        </button>
-        <button onClick={handleMonthlyBtn} value="monthly" className="hover">
+        </li>
+        <li
+          role="tab"
+          aria-labelledby="monthly"
+          onClick={handleMonthlyTab}
+          value="monthly"
+          className="time-frame-element"
+        >
           Monthly
-        </button>
-      </div>
+        </li>
+      </ul>
     </div>
   );
 };

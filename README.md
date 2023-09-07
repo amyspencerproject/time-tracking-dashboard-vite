@@ -54,16 +54,7 @@ Your users should be able to:
 
 - When you import a `.json` file into React it will automatically be parsed 🥳
 
-- Used a button elements for the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard.
-- Since I used buttons I could not keep the time frame switching in the same event handler
-  `// This wont work with each time frame being a button`
-
-  ```
-  const handleTimeFrameChange = (e) => {
-  setTimeFrame(e.target.value);
-  console.log(timeFrame);
-  };
-  ```
+- Used an unordered list with roles and aria-labels for the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard. Additionally a screen reader should leave no doubts that these options are available and grouped together.
 
 - Have not been able to get `filter()` to work `data`. This is an array of objects with nested objects. I can get pull out specific information by saving each object in data as a variable.
 
@@ -78,14 +69,10 @@ Your users should be able to:
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Tabs for Accessibility](https://inclusive-components.design/tabbed-interfaces/) - In depth look at using tabbed interfaces ie lists with role/aria labeling for better accessibility
 
 ## Author
 
 - Website - [Amy Spencer](https://spencerproject.com/)
 - Frontend Mentor - [@amyspencerproject](https://www.frontendmentor.io/profile/amyspencerproject)
 - Linkedin - [amyspencercodes](https://www.linkedin.com/in/amyspencercodes/)
-
-```
-
-```

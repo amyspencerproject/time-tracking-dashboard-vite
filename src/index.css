@@ -171,9 +171,14 @@ button {
   justify-content: space-between;
   gap: 1rem;
   margin: 1.5rem;
+  padding: 0;
 }
 
-.hover:hover {
+.time-frame-element {
+  list-style-type: none;
+}
+
+.time-frame-element:hover {
   color: var(--white);
 }
 
