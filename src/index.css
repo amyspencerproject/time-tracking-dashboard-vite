@@ -253,41 +253,41 @@ button {
 
 .work {
   background-color: var(--light-red-work);
-  background-image: url(/public/icon-work.svg);
+  background-image: url(/icon-work.svg);
   background-repeat: no-repeat;
   background-position: right 8% top -6%;
 }
 
 .play {
   background-color: var(--soft-blue-play);
-  background-image: url(/public/icon-play.svg);
+  background-image: url(/icon-play.svg);
   background-repeat: no-repeat;
   background-position: right 8% top -6%;
 }
 .study {
   background-color: var(--light-red-study);
-  background-image: url(/public/icon-study.svg);
+  background-image: url(/icon-study.svg);
   background-repeat: no-repeat;
   background-position: right 8% top -6%;
 }
 
 .exercise {
   background-color: var(--lime-green-exercise);
-  background-image: url(/public/icon-exercise.svg);
+  background-image: url(/icon-exercise.svg);
   background-repeat: no-repeat;
   background-position: right 8% top 1%;
 }
 
 .social {
   background-color: var(--violet-social);
-  background-image: url(/public/icon-social.svg);
+  background-image: url(/icon-social.svg);
   background-repeat: no-repeat;
   background-position: right 8% top -6%;
 }
 
 .self-care {
   background-color: var(--soft-orange-self-care);
-  background-image: url(/public/icon-self-care.svg);
+  background-image: url(/icon-self-care.svg);
   background-repeat: no-repeat;
   background-position: right 8% top -6%;
 }
