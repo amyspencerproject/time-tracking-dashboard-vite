@@ -11,7 +11,7 @@ const ProfileCard = ({ handleDailyTab, handleWeeklyTab, handleMonthlyTab }) => {
       <ul role="tablist" className="flex-wrapper frequency-text">
         <li
           role="tab"
-          aria-label="daily"
+          aria-labelledby="daily"
           onClick={handleDailyTab}
           value="daily"
           className="time-frame-element"
@@ -20,7 +20,7 @@ const ProfileCard = ({ handleDailyTab, handleWeeklyTab, handleMonthlyTab }) => {
         </li>
         <li
           role="tab"
-          aria-label="weekly"
+          aria-labelledby="weekly"
           onClick={handleWeeklyTab}
           value="weekly"
           className="time-frame-element"

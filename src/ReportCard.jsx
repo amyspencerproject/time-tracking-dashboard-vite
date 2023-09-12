@@ -7,8 +7,6 @@
 // when a user selects daily then map over daily data for all categories to populate card info
 
 const ReportCard = ({ selectedTimeFrame }) => {
-  console.log(selectedTimeFrame);
-  console.log(selectedTimeFrame[0].title);
   const work = selectedTimeFrame[0];
   const play = selectedTimeFrame[1];
   const study = selectedTimeFrame[2];
