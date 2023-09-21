@@ -14,10 +14,9 @@ const ReportCard = ({ selectedTimeFrame }) => {
   const social = selectedTimeFrame[4];
   const selfcare = selectedTimeFrame[5];
 
-  console.log(study);
   return (
     <>
-      <div className="report-card card work">
+      <div className={`report-card card ${work.classname}`}>
         <div className="report-info card">
           <div className="report-header">
             <h2>{work.title}</h2>
@@ -46,7 +45,7 @@ const ReportCard = ({ selectedTimeFrame }) => {
         </div>
       </div>
 
-      <div className="report-card card play">
+      <div className={`report-card card ${play.classname}`}>
         <div className="report-info card">
           <div className="report-header">
             <h2>{play.title}</h2>
@@ -75,7 +74,7 @@ const ReportCard = ({ selectedTimeFrame }) => {
         </div>
       </div>
 
-      <div className="report-card card study">
+      <div className={`report-card card ${study.classname}`}>
         <div className="report-info card">
           <div className="report-header">
             <h2>{study.title}</h2>
@@ -104,7 +103,7 @@ const ReportCard = ({ selectedTimeFrame }) => {
         </div>
       </div>
 
-      <div className="report-card card exercise">
+      <div className={`report-card card ${exercise.classname}`}>
         <div className="report-info card">
           <div className="report-header">
             <h2>{exercise.title}</h2>
@@ -166,7 +165,7 @@ const ReportCard = ({ selectedTimeFrame }) => {
         </div>
       </div>
 
-      <div className="report-card card self-care">
+      <div className={`report-card card ${selfcare.classname}`}>
         <div className="report-info card">
           <div className="report-header">
             <h2>{selfcare.title}</h2>

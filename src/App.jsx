@@ -13,6 +13,7 @@ function App() {
     selectedTimeFrame = data.map((data) => {
       return {
         title: data.title,
+        classname: data.title.toLowerCase().replace(/\s+/g, "-"),
         timeframes: data.timeframes.daily,
       };
     });
@@ -22,6 +23,7 @@ function App() {
     selectedTimeFrame = data.map((data) => {
       return {
         title: data.title,
+        classname: data.title.toLowerCase().replace(/\s+/g, "-"),
         timeframes: data.timeframes.weekly,
       };
     });
@@ -31,6 +33,7 @@ function App() {
     selectedTimeFrame = data.map((data) => {
       return {
         title: data.title,
+        classname: data.title.toLowerCase().replace(/\s+/g, "-"),
         timeframes: data.timeframes.monthly,
       };
     });
