@@ -19,13 +19,11 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
 
 ### The challenge
 
-Your challenge is to build out this dashboard and get it looking as close to the design as possible.
+The challenge is to build out this dashboard and get it looking as close to the design as possible.
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+A local `data.json` file for the activities is provided. The data is pulled from this file into the app.
 
-If you would like to practice working with JSON data, we provide a local `data.json` file for the activities. This means you'll be able to pull the data from there instead of using the content in the `.html` file.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -34,12 +32,14 @@ Your users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./readme-screenshots/daily.png) ![](./readme-screenshots/weekly.png) ![](./readme-screenshots/monthly.png)
+
+![](./readme-screenshots/desktop.png)
 
 ### Links
 
 - Github Repo URL: [Time Tracking Dashboard Repo](https://github.com/amyspencerproject/time-tracking-dashboard-vite)
-- Live Site URL: [ X Page]()
+- Live Site URL: [ Time Tracking Dashboard Page](https://mellow-marigold-a587e3.netlify.app/)
 
 ## My process
 
@@ -59,6 +59,9 @@ Your users should be able to:
 - Not sure the best approach for handling the larger data set that is `data`. Would it be alright to pull each object out into a variable named for it's category and then just handle data separatly? Or should you always keep the data source as the primary place to get data from?
 
 ### Continued development
+
+- Not satisfied with how the way I pulled the selected time frame data out of the data.json file.
+- The ReportCard JSX could be reduced to just one `<div>` if the svg icons were not inline. I haven't use svg's in sprite and I think this would be the way to get the icons into a form where they could be part of the data and pulled into the JSX by being `map()-ed` over.
 
 ### Useful resources
 
