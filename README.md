@@ -54,14 +54,7 @@ Your users should be able to:
 
 - When you import a `.json` file into React it will automatically be parsed 🥳
 
-- Used an unordered list with roles and aria-labels for the time frame options. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard. Additionally a screen reader should leave no doubts that these options are available and grouped together.
-
-- Have not been able to get `filter()` to work `data`. This is an array of objects with nested objects. I can get pull out specific information by saving each object in data as a variable.
-
-  ```
-  const work = data[0];
-  <h2>{work.title}</h2>
-  ```
+- Used an unordered list with roles and aria-labels for accessibility on the time frame options in the ProfileCard component. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard. Additionally, it should be clear to a screen reader that these are choices grouped together. Using a list leaves no doubt that the choices are grouped.
 
 - Not sure the best approach for handling the larger data set that is `data`. Would it be alright to pull each object out into a variable named for it's category and then just handle data separatly? Or should you always keep the data source as the primary place to get data from?
 

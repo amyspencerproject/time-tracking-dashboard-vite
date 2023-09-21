@@ -9,6 +9,7 @@ function App() {
   const [timeFrame, setTimeFrame] = useState("daily");
 
   let selectedTimeFrame;
+
   if (timeFrame === "daily") {
     selectedTimeFrame = data.map((data) => {
       return {
@@ -42,7 +43,6 @@ function App() {
   const handleDailyTab = () => {
     setTimeFrame("daily");
     // add aria-selected="true"
-    // have text turn white when selected
   };
 
   // weekly
@@ -60,11 +60,15 @@ function App() {
       <main>
         <div className="all-cards-container">
           <ProfileCard
-            handleDailyTab={handleDailyTab}
-            handleWeeklyTab={handleWeeklyTab}
-            handleMonthlyTab={handleMonthlyTab}
+            onDailyTab={handleDailyTab}
+            onWeeklyTab={handleWeeklyTab}
+            onMonthlyTab={handleMonthlyTab}
+            timeFrame={timeFrame}
           />
-          <ReportCard selectedTimeFrame={selectedTimeFrame} />
+          <ReportCard
+            selectedTimeFrame={selectedTimeFrame}
+            timeFrame={timeFrame}
+          />
         </div>
         <Footer />
       </main>

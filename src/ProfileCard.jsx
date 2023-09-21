@@ -1,4 +1,4 @@
-const ProfileCard = ({ handleDailyTab, handleWeeklyTab, handleMonthlyTab }) => {
+const ProfileCard = ({ onDailyTab, onWeeklyTab, onMonthlyTab, timeFrame }) => {
   return (
     <div className="card profile-card">
       <div className="profile card">
@@ -12,27 +12,42 @@ const ProfileCard = ({ handleDailyTab, handleWeeklyTab, handleMonthlyTab }) => {
         <li
           role="tab"
           aria-labelledby="daily"
-          onClick={handleDailyTab}
+          onClick={onDailyTab}
           value="daily"
-          className="time-frame-element"
+          className={
+            timeFrame === "daily"
+              ? "active time-frame-element"
+              : "time-frame-element"
+          }
+          aria-selected={timeFrame === "daily" ? "true" : "false"}
         >
           Daily
         </li>
         <li
           role="tab"
           aria-labelledby="weekly"
-          onClick={handleWeeklyTab}
+          onClick={onWeeklyTab}
           value="weekly"
-          className="time-frame-element"
+          className={
+            timeFrame === "weekly"
+              ? "active time-frame-element"
+              : "time-frame-element"
+          }
+          aria-selected={timeFrame === "weekly" ? "true" : "false"}
         >
           Weekly
         </li>
         <li
           role="tab"
           aria-labelledby="monthly"
-          onClick={handleMonthlyTab}
+          onClick={onMonthlyTab}
           value="monthly"
-          className="time-frame-element"
+          className={
+            timeFrame === "monthly"
+              ? "active time-frame-element"
+              : "time-frame-element"
+          }
+          aria-selected={timeFrame === "monthly" ? "true" : "false"}
         >
           Monthly
         </li>

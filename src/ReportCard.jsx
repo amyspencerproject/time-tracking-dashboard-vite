@@ -6,7 +6,7 @@
 // pull out all the data for each time frame - maybe with filter() or maybe with map()
 // when a user selects daily then map over daily data for all categories to populate card info
 
-const ReportCard = ({ selectedTimeFrame }) => {
+const ReportCard = ({ selectedTimeFrame, timeFrame }) => {
   const work = selectedTimeFrame[0];
   const play = selectedTimeFrame[1];
   const study = selectedTimeFrame[2];
@@ -37,10 +37,24 @@ const ReportCard = ({ selectedTimeFrame }) => {
           </div>
           <div className="flex-wrapper hours-text">
             <span className="total-hours">{work.timeframes.current}hrs</span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">{work.timeframes.previous}hrs</span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">{work.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">{work.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">{work.timeframes.previous}hrs</span>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -66,10 +80,24 @@ const ReportCard = ({ selectedTimeFrame }) => {
           </div>
           <div className="flex-wrapper hours-text">
             <span className="total-hours">{play.timeframes.current}hrs</span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">{play.timeframes.previous}hrs</span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">{play.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">{play.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">{play.timeframes.previous}hrs</span>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -95,10 +123,24 @@ const ReportCard = ({ selectedTimeFrame }) => {
           </div>
           <div className="flex-wrapper hours-text">
             <span className="total-hours">{study.timeframes.current}hrs</span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">{study.timeframes.previous}hrs</span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">{study.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">{study.timeframes.previous}hrs</span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">{study.timeframes.previous}hrs</span>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -126,12 +168,30 @@ const ReportCard = ({ selectedTimeFrame }) => {
             <span className="total-hours">
               {exercise.timeframes.current}hrs
             </span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">
-                {exercise.timeframes.previous}hrs
-              </span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">
+                  {exercise.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">
+                  {exercise.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">
+                  {exercise.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -157,10 +217,30 @@ const ReportCard = ({ selectedTimeFrame }) => {
           </div>
           <div className="flex-wrapper hours-text">
             <span className="total-hours">{social.timeframes.current}hrs</span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">{social.timeframes.previous}hrs</span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">
+                  {social.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">
+                  {social.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">
+                  {social.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -188,12 +268,30 @@ const ReportCard = ({ selectedTimeFrame }) => {
             <span className="total-hours">
               {selfcare.timeframes.current}hrs
             </span>
-            <p>
-              Last Week -{" "}
-              <span className="previous">
-                {selfcare.timeframes.previous}hrs
-              </span>
-            </p>
+            {timeFrame === "daily" && (
+              <p>
+                Yesterday -{" "}
+                <span className="previous">
+                  {selfcare.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "weekly" && (
+              <p>
+                Last week -{" "}
+                <span className="previous">
+                  {selfcare.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
+            {timeFrame === "monthly" && (
+              <p>
+                Last month -{" "}
+                <span className="previous">
+                  {selfcare.timeframes.previous}hrs
+                </span>
+              </p>
+            )}
           </div>
         </div>
       </div>
