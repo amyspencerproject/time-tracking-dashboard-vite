@@ -55,6 +55,7 @@ Users should be able to:
 - When you import a `.json` file into React it will automatically be parsed 🥳
 
 - Used an unordered list with roles and aria-labels for accessibility on the time frame options in the ProfileCard component. The user needs to be able to switch between daily, weekly, and monthly states. For accesibiltiy they should be able to do this with a mouse and a keyboard. Additionally, it should be clear to a screen reader that these are choices grouped together. Using a list leaves no doubt that the choices are grouped.
+- TabIndex attributes should almost never be greater than zero. The general advice is to set value at `0` or `-1`. Having values `> 0` can change flex ordering and be difficult for screen readers and other assitive tech navigating a page. My goal was to just make the time frames focasable/clickable for a keyboard user not to infer a specific chronological order.
 
 - Not sure the best approach for handling the larger data set that is `data`. Would it be alright to pull each object out into a variable named for it's category and then just handle data separatly? Or should you always keep the data source as the primary place to get data from?
 
@@ -66,6 +67,7 @@ Users should be able to:
 ### Useful resources
 
 - [Tabs for Accessibility](https://inclusive-components.design/tabbed-interfaces/) - In depth look at using tabbed interfaces ie lists with role/aria labeling for better accessibility
+- [TabIndex Attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex) - Don't make tabIndex values greater than zero for most scenarios
 
 ## Author
 

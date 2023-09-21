@@ -11,7 +11,7 @@ const ProfileCard = ({ onDailyTab, onWeeklyTab, onMonthlyTab, timeFrame }) => {
       <ul role="tablist" className="flex-wrapper frequency-text">
         <li
           role="tab"
-          tabIndex="1"
+          tabIndex="0"
           aria-labelledby="daily"
           onClick={onDailyTab}
           value="daily"
@@ -26,7 +26,7 @@ const ProfileCard = ({ onDailyTab, onWeeklyTab, onMonthlyTab, timeFrame }) => {
         </li>
         <li
           role="tab"
-          tabIndex="2"
+          tabIndex="0"
           aria-labelledby="weekly"
           onClick={onWeeklyTab}
           value="weekly"
@@ -41,7 +41,7 @@ const ProfileCard = ({ onDailyTab, onWeeklyTab, onMonthlyTab, timeFrame }) => {
         </li>
         <li
           role="tab"
-          tabIndex="3"
+          tabIndex="0"
           aria-labelledby="monthly"
           onClick={onMonthlyTab}
           value="monthly"
